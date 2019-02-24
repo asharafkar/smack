@@ -66,41 +66,41 @@
                                 <state key="normal" image="addChannelButton"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="X64-nH-aY0">
-                                <rect key="frame" x="16" y="573" width="74" height="74"/>
+                                <rect key="frame" x="16" y="583" width="64" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="H2e-de-PFo"/>
-                                    <constraint firstAttribute="width" constant="74" id="llL-kA-bCX"/>
+                                    <constraint firstAttribute="width" constant="64" id="XQ2-q1-f4u"/>
+                                    <constraint firstAttribute="height" constant="64" id="mHZ-DR-Ldz"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-2W-KuD">
+                                <rect key="frame" x="0.0" y="117" width="375" height="458"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amir Sharafkar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcx-E2-Kvn">
-                                <rect key="frame" x="98" y="590" width="261" height="40"/>
+                                <rect key="frame" x="88" y="595" width="271" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1m8-gc-Hzp"/>
+                                    <constraint firstAttribute="height" constant="40" id="Yt6-8B-hwa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-2W-KuD">
-                                <rect key="frame" x="0.0" y="117" width="375" height="448"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="X64-nH-aY0" firstAttribute="leading" secondItem="pSZ-5n-RUP" secondAttribute="leading" constant="16" id="1PE-Ht-SQM"/>
+                            <constraint firstItem="x5F-2W-KuD" firstAttribute="top" secondItem="yED-0S-VwI" secondAttribute="bottom" constant="8" id="5Xr-8T-cuf"/>
                             <constraint firstItem="yED-0S-VwI" firstAttribute="leading" secondItem="pSZ-5n-RUP" secondAttribute="leading" constant="16" id="6CQ-SG-cla"/>
                             <constraint firstItem="pSZ-5n-RUP" firstAttribute="trailing" secondItem="fjd-Yv-hk4" secondAttribute="trailing" constant="80" id="8hJ-WI-adc"/>
-                            <constraint firstItem="x5F-2W-KuD" firstAttribute="top" secondItem="yED-0S-VwI" secondAttribute="bottom" constant="8" id="CcK-bn-Fxn"/>
-                            <constraint firstItem="x5F-2W-KuD" firstAttribute="leading" secondItem="pSZ-5n-RUP" secondAttribute="leading" id="E8Y-J0-OuY"/>
-                            <constraint firstItem="hcx-E2-Kvn" firstAttribute="centerY" secondItem="X64-nH-aY0" secondAttribute="centerY" id="JTm-wI-d6M"/>
+                            <constraint firstItem="X64-nH-aY0" firstAttribute="top" secondItem="x5F-2W-KuD" secondAttribute="bottom" constant="8" id="D7h-to-9I3"/>
                             <constraint firstItem="yED-0S-VwI" firstAttribute="top" secondItem="4bg-BL-uS0" secondAttribute="bottom" constant="8" id="JzG-Kd-8RF"/>
-                            <constraint firstItem="hcx-E2-Kvn" firstAttribute="leading" secondItem="X64-nH-aY0" secondAttribute="trailing" constant="8" id="NHq-FP-mWI"/>
-                            <constraint firstItem="pSZ-5n-RUP" firstAttribute="bottom" secondItem="X64-nH-aY0" secondAttribute="bottom" constant="20" id="P8b-Eo-tKK"/>
-                            <constraint firstItem="pSZ-5n-RUP" firstAttribute="trailing" secondItem="hcx-E2-Kvn" secondAttribute="trailing" constant="16" id="YkM-t7-aTK"/>
-                            <constraint firstItem="X64-nH-aY0" firstAttribute="leading" secondItem="pSZ-5n-RUP" secondAttribute="leading" constant="16" id="ZMj-pT-UeL"/>
+                            <constraint firstItem="x5F-2W-KuD" firstAttribute="leading" secondItem="pSZ-5n-RUP" secondAttribute="leading" id="LCI-Rd-3sh"/>
+                            <constraint firstItem="hcx-E2-Kvn" firstAttribute="centerY" secondItem="X64-nH-aY0" secondAttribute="centerY" id="P3u-EF-bVQ"/>
+                            <constraint firstItem="pSZ-5n-RUP" firstAttribute="trailing" secondItem="hcx-E2-Kvn" secondAttribute="trailing" constant="16" id="Qlu-vK-MSs"/>
+                            <constraint firstItem="x5F-2W-KuD" firstAttribute="trailing" secondItem="pSZ-5n-RUP" secondAttribute="trailing" id="TtZ-HS-7QZ"/>
+                            <constraint firstItem="pSZ-5n-RUP" firstAttribute="bottom" secondItem="X64-nH-aY0" secondAttribute="bottom" constant="20" id="WbB-c8-f0D"/>
+                            <constraint firstItem="hcx-E2-Kvn" firstAttribute="leading" secondItem="X64-nH-aY0" secondAttribute="trailing" constant="8" id="XSW-Io-Wlp"/>
                             <constraint firstItem="4bg-BL-uS0" firstAttribute="top" secondItem="pSZ-5n-RUP" secondAttribute="top" constant="16" id="dGC-5g-3if"/>
-                            <constraint firstItem="X64-nH-aY0" firstAttribute="top" secondItem="x5F-2W-KuD" secondAttribute="bottom" constant="8" id="dQD-Rc-gNb"/>
-                            <constraint firstItem="x5F-2W-KuD" firstAttribute="trailing" secondItem="pSZ-5n-RUP" secondAttribute="trailing" id="nCO-kV-Wb4"/>
                             <constraint firstItem="fjd-Yv-hk4" firstAttribute="centerY" secondItem="yED-0S-VwI" secondAttribute="centerY" id="nY0-3l-0xZ"/>
                             <constraint firstItem="4bg-BL-uS0" firstAttribute="leading" secondItem="pSZ-5n-RUP" secondAttribute="leading" constant="16" id="vp9-dV-HDa"/>
                         </constraints>
