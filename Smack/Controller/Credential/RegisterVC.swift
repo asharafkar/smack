@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterVC: UIViewController {
+class RegisterVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var emailText: UITextField!
@@ -18,6 +18,7 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordText.delegate = self
     }
 
     @IBAction func registerBtnPressed(_ sender: Any) {
@@ -51,5 +52,10 @@ class RegisterVC: UIViewController {
                 print("user has been registered!")
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
 }
