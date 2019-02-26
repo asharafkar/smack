@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2949309F2223334B008F37C4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2949309E2223334B008F37C4 /* LoginVC.swift */; };
 		2961CE282222CD4300A69E44 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961CE272222CD4300A69E44 /* Constants.swift */; };
 		2961CE2D2222D6F800A69E44 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961CE2C2222D6F800A69E44 /* RegisterVC.swift */; };
 		298273D4222292C000ED6A0C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298273D3222292C000ED6A0C /* GradientView.swift */; };
@@ -17,11 +18,13 @@
 		299F78E822217D5400F833E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299F78E722217D5400F833E9 /* Assets.xcassets */; };
 		299F78EB22217D5400F833E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299F78E922217D5400F833E9 /* LaunchScreen.storyboard */; };
 		299F78F62221928A00F833E9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299F78F52221928A00F833E9 /* SWRevealViewController.m */; };
+		29D2373F22251AF5003194D5 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D2373E22251AF5003194D5 /* AuthService.swift */; };
 		AFFD76362E3A8A5C6098A1E9 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F6A54D2B1813B98DEA60C8 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		10F6A54D2B1813B98DEA60C8 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2949309E2223334B008F37C4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2961CE272222CD4300A69E44 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2961CE2C2222D6F800A69E44 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		298273D3222292C000ED6A0C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		299F78F32221928900F833E9 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		299F78F42221928A00F833E9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		299F78F52221928A00F833E9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		29D2373E22251AF5003194D5 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7CDFA9C2D602F8F3A1C3B759 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		843B5F05A83BC05D1E45685D /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				2961CE2C2222D6F800A69E44 /* RegisterVC.swift */,
+				2949309E2223334B008F37C4 /* LoginVC.swift */,
 			);
 			path = Credential;
 			sourceTree = "<group>";
@@ -72,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				2961CE292222D68B00A69E44 /* Credential */,
+				299F78E022217D5300F833E9 /* AppDelegate.swift */,
 				299AA56E2221CD0200A656F6 /* ChatVC.swift */,
 				299AA5702221CD1600A656F6 /* ChannelVC.swift */,
 			);
@@ -115,15 +121,13 @@
 		299F78DF22217D5300F833E9 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				299F78EC22217D5400F833E9 /* Info.plist */,
+				29D2373D22251AC9003194D5 /* Services */,
+				29D2373C22251AA1003194D5 /* Resources */,
 				2961CE262222CD1A00A69E44 /* Utilities */,
 				299AA56D2221CBC000A656F6 /* Model */,
 				299AA56C2221CBB400A656F6 /* View */,
 				299AA56B2221CBA800A656F6 /* Controller */,
-				299F78E022217D5300F833E9 /* AppDelegate.swift */,
-				299F78E422217D5300F833E9 /* Main.storyboard */,
-				299F78E722217D5400F833E9 /* Assets.xcassets */,
-				299F78E922217D5400F833E9 /* LaunchScreen.storyboard */,
-				299F78EC22217D5400F833E9 /* Info.plist */,
 			);
 			path = Smack;
 			sourceTree = "<group>";
@@ -136,6 +140,24 @@
 				299F78F32221928900F833E9 /* Smack-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29D2373C22251AA1003194D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				299F78E422217D5300F833E9 /* Main.storyboard */,
+				299F78E722217D5400F833E9 /* Assets.xcassets */,
+				299F78E922217D5400F833E9 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29D2373D22251AC9003194D5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				29D2373E22251AF5003194D5 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		37D9F6208FE94A29F83587DC /* Frameworks */ = {
@@ -276,6 +298,8 @@
 			files = (
 				299AA5712221CD1600A656F6 /* ChannelVC.swift in Sources */,
 				299AA56F2221CD0200A656F6 /* ChatVC.swift in Sources */,
+				2949309F2223334B008F37C4 /* LoginVC.swift in Sources */,
+				29D2373F22251AF5003194D5 /* AuthService.swift in Sources */,
 				298273D4222292C000ED6A0C /* GradientView.swift in Sources */,
 				299F78E122217D5300F833E9 /* AppDelegate.swift in Sources */,
 				2961CE2D2222D6F800A69E44 /* RegisterVC.swift in Sources */,
