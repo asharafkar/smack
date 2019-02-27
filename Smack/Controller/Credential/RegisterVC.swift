@@ -33,7 +33,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func pickAvatarPressed(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "to_avatar", sender: nil)
     }
     
     
