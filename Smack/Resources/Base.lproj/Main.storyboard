@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qeA-Lg-FOX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -430,6 +430,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TdP-2y-qzE">
                                 <rect key="frame" x="0.0" y="60" width="375" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="gA6-Rd-9Td">
                                     <size key="itemSize" width="102" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -455,6 +456,9 @@
                                             <constraint firstItem="TDJ-gr-qd0" firstAttribute="top" secondItem="6u1-Ny-1ey" secondAttribute="top" constant="10" id="Pro-qE-uYj"/>
                                             <constraint firstItem="TDJ-gr-qd0" firstAttribute="leading" secondItem="6u1-Ny-1ey" secondAttribute="leading" constant="10" id="be8-MP-dlC"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="TDJ-gr-qd0" id="iZ6-IE-4sN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -557,6 +561,6 @@
         <image name="smackProfileIcon" width="192" height="192"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kWx-i2-GYi"/>
+        <segue reference="vMO-TC-Qoh"/>
     </inferredMetricsTieBreakers>
 </document>

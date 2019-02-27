@@ -25,3 +25,8 @@ let TO_CREATE_ACCOUNT = "toCreateAccount"
 let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL_KEY = "userEmail"
+
+enum AvatarType{
+    case dark
+    case light
+}

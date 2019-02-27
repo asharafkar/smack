@@ -23,6 +23,12 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         passwordText.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            userAvatarImage.image = UIImage(named: UserDataService.instance.avatarName)
+        }
+    }
 
     @IBAction func registerBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: self)
