@@ -74,7 +74,6 @@ class AuthService{
                 
                 guard let data = response.data else {return}
                 
-                
                 do{
                  let json = try JSON(data: data)
                      self.userEmail = json["user"].stringValue
@@ -84,6 +83,43 @@ class AuthService{
                 }
                 
                 self.isLoggedIn = true
+                
+                completion(true)
+            }else{
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+            
+        }
+    }
+    
+    func createUser(username: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler){
+        
+        let lowerEmail = email.lowercased()
+        
+        let body : [String: Any] = ["name" : username, "email" : lowerEmail, "avatarName" : avatarName, "avatarColor" : avatarColor]
+        
+        let header = ["Content-Type" : "application/json; charset=utf-8", "Authorization" : "Bearer \(authToken)"]
+        
+        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            
+            if response.result.error == nil{
+                
+                guard let data = response.data else {return}
+                
+                do{
+                    let json = try JSON(data: data)
+                    let id = json["_id"].stringValue
+                    let avatarColor = json["avatarColor"].stringValue
+                    let avatarName = json["avatarName"].stringValue
+                    let email = json["email"].stringValue
+                    let name = json["name"].stringValue
+                    
+                    UserDataService.instance.setUserData(id: id, color: avatarColor, avatarName: avatarName, email: email, name: name)
+                }catch{
+                    
+                }
+                
                 
                 completion(true)
             }else{

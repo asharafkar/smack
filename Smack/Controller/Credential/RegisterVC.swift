@@ -14,6 +14,9 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var userAvatarImage: UIImageView!
+    
+    var avatarName: String = "profileDefault"
+    var avatarColor = "[0.5, 0.5, 0.5, 1]"
 
     
     override func viewDidLoad() {
@@ -39,6 +42,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createAccountPressed(_ sender: UIButton) {
+        
         guard let email = emailText.text, emailText.text != "" else {
             return
         }
@@ -47,12 +51,20 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             return
         }
         
+        guard let username = usernameText.text, usernameText.text != "" else {
+            return
+        }
+        
         AuthService.instance.registerUser(email: email, password: password) { (success) in
             if success {
                 print("user has been registered!")
                 AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
                     if success{
-                        print("Success")
+                        AuthService.instance.createUser(username: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                            if success{
+                                self.performSegue(withIdentifier: "to_channel", sender: nil)
+                            }
+                        })
                     }
                 })
             }

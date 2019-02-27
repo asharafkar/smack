@@ -399,6 +399,7 @@
                         <outlet property="passwordText" destination="ZNU-Jp-giD" id="fDO-1s-PbF"/>
                         <outlet property="userAvatarImage" destination="Ctq-c6-2W4" id="mjc-xj-oo0"/>
                         <outlet property="usernameText" destination="c0e-bB-1Np" id="gKu-Rb-IRi"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="to_channel" id="REi-Tu-SuR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YH4-zm-O1n" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 let BASE_URL = "http://192.168.60.41:3005/v1"
 let URL_REGISTER = "\(BASE_URL)/account/register"
 let URL_LOGIN = "\(BASE_URL)/account/login"
+let URL_USER_ADD = "\(BASE_URL)/user/add"
 
 let HEADER = ["Content-Type" : "application/json; charset=utf-8"]
 
