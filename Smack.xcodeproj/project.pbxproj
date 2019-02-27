@@ -78,8 +78,8 @@
 		299AA56B2221CBA800A656F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2961CE292222D68B00A69E44 /* Credential */,
 				299F78E022217D5300F833E9 /* AppDelegate.swift */,
+				2961CE292222D68B00A69E44 /* Credential */,
 				299AA56E2221CD0200A656F6 /* ChatVC.swift */,
 				299AA5702221CD1600A656F6 /* ChannelVC.swift */,
 			);
