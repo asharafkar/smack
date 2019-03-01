@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Smack" customModuleProvider="target">
             <connections>
                 <outlet property="avatarImage" destination="tLw-y1-h4j" id="VxU-No-GQw"/>
+                <outlet property="bgView" destination="9Jm-iL-cul" id="81Q-Ca-pSq"/>
                 <outlet property="emailLbl" destination="pZW-7K-O4W" id="UKy-Uc-hgK"/>
                 <outlet property="usernameLbl" destination="i7s-rZ-aM3" id="u2b-89-D9Z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

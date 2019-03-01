@@ -13,6 +13,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var avatarImage: CircleImage!
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var bgView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +29,20 @@ class ProfileVC: UIViewController {
         emailLbl.text = UserDataService.instance.email
         avatarImage.image = UIImage(named: UserDataService.instance.avatarName)
         avatarImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+        
+        let closeTouch = UITapGestureRecognizer(target: self, action: #selector(self.closeTap(_:)))
+        bgView.addGestureRecognizer(closeTouch)
+        
     }
     
     @IBAction func logoutPressed(_ sender: UIButton) {
-        
+        UserDataService.instance.logout()
+        NotificationCenter.default.post(name: NOTIFICATION_USER_DATA_DID_CHANGE, object: nil)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func closeTap(_ recognizer: UITapGestureRecognizer){
+        dismiss(animated: true, completion: nil)
     }
     
 }
