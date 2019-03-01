@@ -129,6 +129,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="FL5-2z-oTk" id="Kzg-t9-swf"/>
+                        <outlet property="userAvatarImage" destination="X64-nH-aY0" id="V4B-SB-W7L"/>
                         <segue destination="aSe-rV-Cve" kind="show" identifier="toLogin" id="kWx-i2-GYi"/>
                     </connections>
                 </viewController>
@@ -343,7 +344,7 @@
                                     <action selector="createAccountPressed:" destination="e1R-v3-sdo" eventType="touchUpInside" id="R0m-ct-4b7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ctq-c6-2W4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ctq-c6-2W4" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="151.5" y="288" width="72" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="72" id="5g8-xA-Bz2"/>
@@ -372,6 +373,13 @@
                                     <action selector="pickBGColorPressed:" destination="e1R-v3-sdo" eventType="touchUpInside" id="0ng-Ae-TdA"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ltn-ae-lxG">
+                                <rect key="frame" x="175.5" y="321.5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="18f-IR-RlM"/>
+                                    <constraint firstAttribute="width" constant="24" id="3HX-OP-JeX"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -379,6 +387,8 @@
                             <constraint firstItem="Ctq-c6-2W4" firstAttribute="centerX" secondItem="Y18-5x-pUN" secondAttribute="centerX" id="5Qz-qN-UcX"/>
                             <constraint firstItem="PpM-8R-ZJO" firstAttribute="centerX" secondItem="Y18-5x-pUN" secondAttribute="centerX" id="5si-bs-l6b"/>
                             <constraint firstItem="Mwe-cp-XYx" firstAttribute="top" secondItem="YCX-Wc-rVA" secondAttribute="top" constant="16" id="C8a-aq-NFj"/>
+                            <constraint firstItem="ltn-ae-lxG" firstAttribute="centerX" secondItem="Y18-5x-pUN" secondAttribute="centerX" id="CPK-aX-HnL"/>
+                            <constraint firstItem="ltn-ae-lxG" firstAttribute="centerY" secondItem="Y18-5x-pUN" secondAttribute="centerY" id="Ctb-Ev-JJp"/>
                             <constraint firstItem="Fb1-pM-QdQ" firstAttribute="top" secondItem="Mwe-cp-XYx" secondAttribute="bottom" constant="8" id="EYe-6Z-BvR"/>
                             <constraint firstItem="YCX-Wc-rVA" firstAttribute="trailing" secondItem="Ud6-fx-tjE" secondAttribute="trailing" constant="88" id="KcL-Y9-9wq"/>
                             <constraint firstItem="YCX-Wc-rVA" firstAttribute="bottom" secondItem="lHn-SB-Gc9" secondAttribute="bottom" constant="20" id="Rf7-8W-lZ0"/>
@@ -397,9 +407,9 @@
                     <connections>
                         <outlet property="emailText" destination="hB2-j4-St8" id="yWm-4I-nuj"/>
                         <outlet property="passwordText" destination="ZNU-Jp-giD" id="fDO-1s-PbF"/>
+                        <outlet property="spinner" destination="ltn-ae-lxG" id="Sfh-AN-uNt"/>
                         <outlet property="userAvatarImage" destination="Ctq-c6-2W4" id="mjc-xj-oo0"/>
                         <outlet property="usernameText" destination="c0e-bB-1Np" id="gKu-Rb-IRi"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="to_channel" id="REi-Tu-SuR"/>
                         <segue destination="qeA-Lg-FOX" kind="show" identifier="to_avatar" id="YAd-bm-Huo"/>
                     </connections>
                 </viewController>
@@ -560,7 +570,4 @@
         <image name="smackLogo" width="48" height="40"/>
         <image name="smackProfileIcon" width="192" height="192"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="vMO-TC-Qoh"/>
-    </inferredMetricsTieBreakers>
 </document>
