@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		29030B9F2227E61200037265 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29030B9E2227E61200037265 /* CircleImage.swift */; };
 		2949309F2223334B008F37C4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2949309E2223334B008F37C4 /* LoginVC.swift */; };
+		2953B5592229C6B100EF9D25 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953B5572229C6B100EF9D25 /* ProfileVC.swift */; };
+		2953B55A2229C6B100EF9D25 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2953B5582229C6B100EF9D25 /* ProfileVC.xib */; };
 		2954BE802226C5440026F128 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954BE7F2226C5440026F128 /* AvatarPickerVC.swift */; };
 		2954BE822226C6EA0026F128 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954BE812226C6EA0026F128 /* AvatarCell.swift */; };
 		2961CE282222CD4300A69E44 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2961CE272222CD4300A69E44 /* Constants.swift */; };
@@ -31,6 +33,8 @@
 		10F6A54D2B1813B98DEA60C8 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29030B9E2227E61200037265 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		2949309E2223334B008F37C4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2953B5572229C6B100EF9D25 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		2953B5582229C6B100EF9D25 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		2954BE7F2226C5440026F128 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		2954BE812226C6EA0026F128 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		2961CE272222CD4300A69E44 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -66,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2953B5522229B77500EF9D25 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				2953B5582229C6B100EF9D25 /* ProfileVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		2961CE262222CD1A00A69E44 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 				299AA56E2221CD0200A656F6 /* ChatVC.swift */,
 				299AA5702221CD1600A656F6 /* ChannelVC.swift */,
 				2954BE7F2226C5440026F128 /* AvatarPickerVC.swift */,
+				2953B5572229C6B100EF9D25 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 		299F78DF22217D5300F833E9 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				2953B5522229B77500EF9D25 /* XIBs */,
 				299F78EC22217D5400F833E9 /* Info.plist */,
 				29D2373D22251AC9003194D5 /* Services */,
 				29D2373C22251AA1003194D5 /* Resources */,
@@ -253,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2953B55A2229C6B100EF9D25 /* ProfileVC.xib in Resources */,
 				299F78EB22217D5400F833E9 /* LaunchScreen.storyboard in Resources */,
 				299F78E822217D5400F833E9 /* Assets.xcassets in Resources */,
 				299F78E622217D5300F833E9 /* Main.storyboard in Resources */,
@@ -311,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2953B5592229C6B100EF9D25 /* ProfileVC.swift in Sources */,
 				299AA5712221CD1600A656F6 /* ChannelVC.swift in Sources */,
 				2954BE802226C5440026F128 /* AvatarPickerVC.swift in Sources */,
 				29D237412225592D003194D5 /* RoundedButton.swift in Sources */,
