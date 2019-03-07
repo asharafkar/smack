@@ -107,18 +107,7 @@ class AuthService{
                 
                 guard let data = response.data else {return}
                 
-                do{
-                    let json = try JSON(data: data)
-                    let id = json["_id"].stringValue
-                    let avatarColor = json["avatarColor"].stringValue
-                    let avatarName = json["avatarName"].stringValue
-                    let email = json["email"].stringValue
-                    let name = json["name"].stringValue
-                    
-                    UserDataService.instance.setUserData(id: id, color: avatarColor, avatarName: avatarName, email: email, name: name)
-                }catch{
-                    
-                }
+                self.setUserInfo(data: data)
                 
                 
                 completion(true)
@@ -126,6 +115,31 @@ class AuthService{
                 completion(false)
                 debugPrint(response.result.error as Any)
             }
+            
+        }
+    }
+    
+    func findUserByEmail(completion: @escaping CompletionHandler){
+        
+        Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            guard let data = response.data else {return}
+            self.setUserInfo(data: data)
+           
+        }
+    }
+    
+    func setUserInfo(data: Data){
+        do{
+            let json = try JSON(data: data)
+            let id = json["_id"].stringValue
+            let avatarColor = json["avatarColor"].stringValue
+            let avatarName = json["avatarName"].stringValue
+            let email = json["email"].stringValue
+            let name = json["name"].stringValue
+            
+            UserDataService.instance.setUserData(id: id, color: avatarColor, avatarName: avatarName, email: email, name: name)
+        }catch{
             
         }
     }
