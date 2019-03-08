@@ -64,6 +64,9 @@
                                     <constraint firstAttribute="height" constant="24" id="x3l-so-VWH"/>
                                 </constraints>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="AddChannelPressed:" destination="AHH-Po-stT" eventType="touchUpInside" id="Ifx-Fp-LIl"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="X64-nH-aY0" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="583" width="64" height="64"/>
