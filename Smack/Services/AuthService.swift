@@ -95,6 +95,7 @@ class AuthService{
     
     func createUser(username: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler){
         
+
         let lowerEmail = email.lowercased()
         
         let body : [String: Any] = ["name" : username, "email" : lowerEmail, "avatarName" : avatarName, "avatarColor" : avatarColor]
