@@ -23,6 +23,8 @@ let HEADER = ["Content-Type" : "application/json; charset=utf-8"]
 
 let BEARER_HEADER = ["Content-Type" : "application/json; charset=utf-8", "Authorization" : "Bearer \(AuthService.instance.authToken)"]
 
+
+
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
 
@@ -31,6 +33,8 @@ let smackPurplePlaceHolder = #colorLiteral(red: 0.2745098174, green: 0.486274510
 
 //Nottification
 let NOTIFICATION_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+let NOTIFICATION_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIFICATION_CURRENT_CHANNEL = Notification.Name("currentChannel")
 
 // User Defaults
 let TOKEN_KEY = "token"
