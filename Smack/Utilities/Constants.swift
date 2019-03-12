@@ -12,7 +12,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 
 // URL Constants
 //let BASE_URL = "http://192.168.60.41:3005/v1"
-let BASE_URL = "http://169.254.171.193:3005/v1"
+let BASE_URL = "http://169.254.37.176:3005/v1"
 //let BASE_URL = "http://127.0.0.1:3005/v1"
 let URL_REGISTER = "\(BASE_URL)/account/register"
 let URL_LOGIN = "\(BASE_URL)/account/login"

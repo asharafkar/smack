@@ -98,6 +98,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if success{
                     self.messageText.text = ""
                     self.messageText.resignFirstResponder()
+                    self.getMessage()
                 }
             }
             

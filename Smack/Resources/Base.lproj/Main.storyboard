@@ -567,27 +567,30 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q0e-wo-ebU">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="627" width="307" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4bV-BX-m3l"/>
+                                    <constraint firstAttribute="height" constant="40" id="qcO-Y8-Wsa"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-es-kjt">
-                                <rect key="frame" x="335" y="627" width="40" height="40"/>
+                                <rect key="frame" x="315" y="627" width="60" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="R6c-bP-pKM"/>
-                                    <constraint firstAttribute="width" constant="40" id="spA-Aw-Zai"/>
+                                    <constraint firstAttribute="height" constant="40" id="DNs-Vg-zbO"/>
+                                    <constraint firstAttribute="width" constant="60" id="qrl-bb-UfW"/>
                                 </constraints>
-                                <state key="normal" image="send"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="sendMessagePressed:" destination="5ZC-GP-lY9" eventType="touchUpInside" id="Efy-K4-Fqy"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YYL-J9-Sba">
-                                <rect key="frame" x="0.0" y="77" width="375" height="550"/>
+                                <rect key="frame" x="0.0" y="77" width="375" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="upV-Gu-a3t" customClass="MessageCell" customModule="Smack" customModuleProvider="target">
@@ -649,17 +652,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ITF-9R-9hx" firstAttribute="leading" secondItem="wwY-aq-8zk" secondAttribute="leading" id="4E4-mm-d0g"/>
-                            <constraint firstItem="CJp-es-kjt" firstAttribute="centerY" secondItem="q0e-wo-ebU" secondAttribute="centerY" id="6Lu-Im-fCC"/>
-                            <constraint firstItem="q0e-wo-ebU" firstAttribute="bottom" secondItem="wwY-aq-8zk" secondAttribute="bottom" id="S1e-Na-cjI"/>
-                            <constraint firstItem="q0e-wo-ebU" firstAttribute="top" secondItem="YYL-J9-Sba" secondAttribute="bottom" id="du4-0N-jTn"/>
+                            <constraint firstItem="q0e-wo-ebU" firstAttribute="bottom" secondItem="wwY-aq-8zk" secondAttribute="bottom" id="Ore-Rt-eu2"/>
+                            <constraint firstItem="CJp-es-kjt" firstAttribute="bottom" secondItem="wwY-aq-8zk" secondAttribute="bottom" id="Qyr-md-gCv"/>
+                            <constraint firstItem="q0e-wo-ebU" firstAttribute="leading" secondItem="wwY-aq-8zk" secondAttribute="leading" id="dKP-yI-ZHw"/>
                             <constraint firstItem="ITF-9R-9hx" firstAttribute="top" secondItem="CG6-S4-NTQ" secondAttribute="top" id="dvU-sa-Que"/>
-                            <constraint firstItem="q0e-wo-ebU" firstAttribute="leading" secondItem="wwY-aq-8zk" secondAttribute="leading" id="kWd-my-BXX"/>
-                            <constraint firstItem="q0e-wo-ebU" firstAttribute="trailing" secondItem="wwY-aq-8zk" secondAttribute="trailing" id="kY9-gk-rVL"/>
                             <constraint firstItem="ITF-9R-9hx" firstAttribute="trailing" secondItem="wwY-aq-8zk" secondAttribute="trailing" id="mHc-OZ-J0D"/>
-                            <constraint firstItem="CJp-es-kjt" firstAttribute="trailing" secondItem="wwY-aq-8zk" secondAttribute="trailing" id="rr3-Wx-Lla"/>
-                            <constraint firstItem="YYL-J9-Sba" firstAttribute="leading" secondItem="wwY-aq-8zk" secondAttribute="leading" id="tK8-6S-t34"/>
-                            <constraint firstItem="YYL-J9-Sba" firstAttribute="trailing" secondItem="wwY-aq-8zk" secondAttribute="trailing" id="xdi-WE-WjX"/>
-                            <constraint firstItem="YYL-J9-Sba" firstAttribute="top" secondItem="ITF-9R-9hx" secondAttribute="bottom" id="zws-6c-k6c"/>
+                            <constraint firstItem="YYL-J9-Sba" firstAttribute="top" secondItem="ITF-9R-9hx" secondAttribute="bottom" id="mgy-6I-Dqg"/>
+                            <constraint firstItem="q0e-wo-ebU" firstAttribute="top" secondItem="YYL-J9-Sba" secondAttribute="bottom" constant="8" id="sM7-uO-NxJ"/>
+                            <constraint firstItem="YYL-J9-Sba" firstAttribute="trailing" secondItem="wwY-aq-8zk" secondAttribute="trailing" id="uBq-hs-ecV"/>
+                            <constraint firstItem="CJp-es-kjt" firstAttribute="leading" secondItem="q0e-wo-ebU" secondAttribute="trailing" constant="8" id="ula-RS-sTe"/>
+                            <constraint firstItem="CJp-es-kjt" firstAttribute="trailing" secondItem="wwY-aq-8zk" secondAttribute="trailing" id="wLf-k8-ASW"/>
+                            <constraint firstItem="YYL-J9-Sba" firstAttribute="leading" secondItem="wwY-aq-8zk" secondAttribute="leading" id="yfE-pm-kN4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wwY-aq-8zk"/>
                     </view>
@@ -678,7 +681,6 @@
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
-        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
