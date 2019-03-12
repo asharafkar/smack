@@ -14,6 +14,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var messageText: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
+    var isTyping = false
     
     
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
+        sendButton.isHidden = true
         
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -45,6 +48,14 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         MessageService.instance.findAllChannel { (success) in
             
         }
+        
+        SocketService.instance.getChatMessage { (success) in
+            self.tableView.reloadData()
+            if MessageService.instance.messages.count > 0{
+                let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+            }
+        }
     }
     
     @objc func userDataDidChange(_ notif: Notification){
@@ -53,6 +64,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             onLoginGetMessages()
         }else{
             channelNameLabel.text = "Please Login"
+            tableView.reloadData()
         }
     }
     
@@ -98,7 +110,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if success{
                     self.messageText.text = ""
                     self.messageText.resignFirstResponder()
-                    self.getMessage()
                 }
             }
             
@@ -127,4 +138,17 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    @IBAction func messageEditting(_ sender: Any) {
+        if messageText.text == "" {
+            isTyping = false
+            sendButton.isHidden = true
+        }else{
+            if isTyping == false{
+                sendButton.isHidden = false
+            }
+            isTyping = true
+        }
+    }
+    
+    
 }
